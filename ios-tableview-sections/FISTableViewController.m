@@ -17,31 +17,57 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    FISStudent *homeboy = [[FISStudent alloc] init];
+    homeboy.name = @"Homeboy";
+    homeboy.favoriteThings = @[@"Thing1", @"Thing2"];
+    
+    FISStudent *homegirl = [[FISStudent alloc] init];
+    homegirl.name = @"Homegirl";
+    homegirl.favoriteThings = @[@"Thang1", @"Thang2",@"Thang3"];
+    
+    FISStudent *horatio = [[FISStudent alloc] init];
+    horatio.name = @"Horatio";
+    horatio.favoriteThings = @[@"Jack-In-The-Box",@"Curly Fries"];
+    
+    
+    self.students = @[homeboy, homegirl, horatio];
+    
 }
 
-#pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+
+    return [self.students count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+
+    FISStudent *currentStudent = self.students[section];
+    return [currentStudent.favoriteThings count];
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
-    // Configure the cell...
+    FISStudent *currentStudent = self.students[section];
+    return currentStudent.name;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 1;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"expandingCell" forIndexPath:indexPath];
+    
+    FISStudent *currentStudent = self.students[indexPath.section];
+    cell.textLabel.text = currentStudent.favoriteThings[indexPath.row];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

@@ -10,12 +10,13 @@
 		1D7A3280F12235E005A5C12D /* FISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E846210A497472A9281E21A5 /* FISAppDelegate.m */; };
 		26D2EC7CF35DD0479B61847E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94348D747DA419CA40DE9A58 /* Images.xcassets */; };
 		274E004E2F7DFB4BCC1FA128 /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D796E6247B49860304DD2D1 /* libPods-unit_tests.a */; };
-		4D55491F1BC8701D001E3D77 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D55491E1BC8701D001E3D77 /* Launch Screen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		4D55491F1BC8701D001E3D77 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D55491E1BC8701D001E3D77 /* Launch Screen.storyboard */; };
 		6191FE33C8C724323AD8B38F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330A711D06806FFFDF20B7AD /* Foundation.framework */; };
 		E245C2A81B1CF76F00438E2D /* FISTableViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = E245C2A71B1CF76F00438E2D /* FISTableViewControllerSpec.m */; };
 		E2F260E31B17A41500949FCA /* FISTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F260E21B17A41500949FCA /* FISTableViewController.m */; };
 		E2F260E51B17A46100949FCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F260E41B17A46100949FCA /* Main.storyboard */; };
 		FE9C4F2FAFB524BA8C24F4F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A640C89E3C4B09F2173B29 /* main.m */; };
+		FF6E64931D1CA971009E33A8 /* FISStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6E64921D1CA971009E33A8 /* FISStudent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		EB550FBC335C0AAEE39EB732 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F224206993A181C101511740 /* FISAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FISAppDelegate.h; sourceTree = "<group>"; };
 		F6FD392706834B6E0A264D30 /* ios-tableview-sections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-tableview-sections.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF6E64911D1CA971009E33A8 /* FISStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISStudent.h; sourceTree = "<group>"; };
+		FF6E64921D1CA971009E33A8 /* FISStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISStudent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +167,8 @@
 				E2F260E41B17A46100949FCA /* Main.storyboard */,
 				E2F260E11B17A41500949FCA /* FISTableViewController.h */,
 				E2F260E21B17A41500949FCA /* FISTableViewController.m */,
+				FF6E64911D1CA971009E33A8 /* FISStudent.h */,
+				FF6E64921D1CA971009E33A8 /* FISStudent.m */,
 				3D5FD3E164430F289CEDA9F2 /* Resources */,
 			);
 			path = "ios-tableview-sections";
@@ -304,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF6E64931D1CA971009E33A8 /* FISStudent.m in Sources */,
 				E2F260E31B17A41500949FCA /* FISTableViewController.m in Sources */,
 				1D7A3280F12235E005A5C12D /* FISAppDelegate.m in Sources */,
 				FE9C4F2FAFB524BA8C24F4F3 /* main.m in Sources */,
