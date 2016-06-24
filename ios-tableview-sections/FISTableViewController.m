@@ -19,15 +19,24 @@
     
     FISStudent *homeboy = [[FISStudent alloc] init];
     homeboy.name = @"Homeboy";
-    homeboy.favoriteThings = @[@"Thing1", @"Thing2"];
+    homeboy.favoriteFood = @"pizza";
+    homeboy.favoriteColor = @"Green";
+    homeboy.favoriteMusicalArtist = @"Tupac";
+    homeboy.favoriteGame = @"Life";
     
     FISStudent *homegirl = [[FISStudent alloc] init];
     homegirl.name = @"Homegirl";
-    homegirl.favoriteThings = @[@"Thang1", @"Thang2",@"Thang3"];
+    homegirl.favoriteFood = @"Steak";
+    homegirl.favoriteColor = @"Orange";
+    homegirl.favoriteMusicalArtist = @"Nas";
+    homegirl.favoriteGame = @"Tetris";
     
     FISStudent *horatio = [[FISStudent alloc] init];
     horatio.name = @"Horatio";
-    horatio.favoriteThings = @[@"Jack-In-The-Box",@"Curly Fries"];
+    horatio.favoriteFood = @"Bacon Sammich";
+    horatio.favoriteColor = @"Turqoise";
+    horatio.favoriteMusicalArtist = @"Common";
+    horatio.favoriteGame = @"Starcraft";
     
     
     self.students = @[homeboy, homegirl, horatio];
@@ -42,8 +51,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    FISStudent *currentStudent = self.students[section];
-    return [currentStudent.favoriteThings count];
+    return 4;
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
@@ -62,7 +70,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"expandingCell" forIndexPath:indexPath];
     
     FISStudent *currentStudent = self.students[indexPath.section];
-    cell.textLabel.text = currentStudent.favoriteThings[indexPath.row];
+    NSArray *propertyArray = @[currentStudent.favoriteFood, currentStudent.favoriteColor, currentStudent.favoriteMusicalArtist, currentStudent.favoriteGame];
+    NSArray *propertyNameArray = @[@"Food:", @"Color:", @"Artist:", @"Game:"];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@",propertyNameArray[indexPath.row],propertyArray[indexPath.row]];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld",(long)indexPath.row];
     
     return cell;
